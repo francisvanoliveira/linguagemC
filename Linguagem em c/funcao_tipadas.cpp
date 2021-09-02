@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-void peso_ideal(char sexo, float altura){
+float peso_ideal(char sexo, float altura){
     float peso_ideal;
     
     switch(toupper(sexo)){ //toupper tranforma o caractere em maisculo
@@ -13,19 +13,21 @@ void peso_ideal(char sexo, float altura){
         default: printf("Sexo inválido! Digite F ou M \n");
             break;
     }
-    printf("Peso ideal: %2.f \n", peso_ideal);
+    return peso_ideal;
 }
 
 int main(){
     char sexo;
     float altura;
+    //float peso;
 
     printf("Digite seu sexo: \n");
     scanf("%c", &sexo);
     printf("Digite sua altura (em metros): \n");
     scanf("%f", &altura);
 
-    peso_ideal(sexo, altura);
+    //peso = peso_ideal(sexo, altura);
+    printf("Peso ideal: %2.f \n", peso_ideal(sexo, altura));
 
     return 0;
 }
