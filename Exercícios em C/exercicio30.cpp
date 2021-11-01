@@ -1,3 +1,12 @@
+/*Escreva um programa que lê uma matriz M(5,5) e calcula as somas:
+- da linha 4 de M 
+- da coluna 2 de M
+- da diagonal principal
+- da diagonal secundária
+- de todos os elementos da matriz M 
+Escrever essas somas e a matriz.
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -22,7 +31,7 @@ int main (){
 			if(j==1)
 				coluna+=matriz[i][j];
 			if(i==3)
-				linha+=matriz[i][j];//soma a minha 4
+				linha+=matriz[i][j];
 			if(i==j)
 				dia+=matriz[i][j];
 			if (j==tam-i-1)
