@@ -1,6 +1,6 @@
 # linguagem C
 
-Exercícios resolvidos, disciplina Introdução a Programação.
+:books: Exercícios resolvidos, disciplina Introdução a Programação.
 
-- Análise e Desenvolvimento de Sistema - ESBAM
-- Ciência da Computação - Universidade Anhembi Morumbi
+- :school: Análise e Desenvolvimento de Sistema - ESBAM
+- :school: Ciência da Computação - Universidade Anhembi Morumbi
