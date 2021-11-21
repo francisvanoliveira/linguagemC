@@ -8,9 +8,12 @@
 * Ex.: 4! = 1 x 2 x 3 x 4 = 24
 * Lembre-se: o fatorial de 0 é 1 (por definição)
 **************************************************************************/
-#include <stdio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
 
 int main(){
+	setlocale (LC_ALL,"Portuguese");
 	int fat=1, n, cont;
 	
 	printf("Informe um valor: ");
@@ -18,7 +21,9 @@ int main(){
 	
 	for(cont=1; cont<=n; cont++)
 		fat*=cont;
-	
-	printf("%d",fat);
+		
+	system("cls");
+	printf("----- RESULTADO -----\n\n");
+	printf("Fatorial de %d é %d",n, fat);
 	return 0;
 }

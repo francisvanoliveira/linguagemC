@@ -1,6 +1,13 @@
-/*6.	Fazer um programa para verificar se um número lido é primo ou não. 
-Número primo é aquele que é divisível por 1 e por ele mesmo.
-*/
+/*************************************************************************
+* Faculdade: ESBAM
+* Disciplina: Projeto de Algoritmo e Técnicas de Programação
+* Professora: Ivana
+* Aluno: Francisvan Oliveira Pessoa
+*
+* Fazer um programa para verificar se um número lido é primo ou não. 
+* Número primo é aquele que é divisível por 1 e por ele mesmo.
+**************************************************************************/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<locale.h>//biblioteca para utilizar setlocale

@@ -3,54 +3,36 @@
 * Disciplina: Projeto de Algoritmo e Técnicas de Programação
 * Aluno: Francisvan Oliveira Pessoa
 *
-* Faça um programa com 3 vetores de 9 posições e crie o 4º vetor com o 1º terço do primeiro vetor, 
-* o 2º terço do segundo vetor e o último terço do terceiro vetor. Escrever o vetor resultante ao final.
+* Escreva um programa para ler 2 valores e se o segundo valor informado for ZERO, 
+* deve ser lido um novo valor, ou seja, para o segundo valor não pode ser aceito o valor zero e imprimir o resultado da divisão do primeiro valor lido pelo segundo valor lido. 
 **************************************************************************/
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
-
-#define TAM 9
+#include<locale.h>//biblioteca para utilizar setlocale
 
 int main(){
 	setlocale(LC_ALL,"Portuguese");
 	
-	int v1[TAM], v2[TAM], v3[TAM], v4[TAM], i;
+	float n1, n2, div=0;
 	
-	printf("----- VETOR 1 -----\n");
-	for(i=0; i<TAM; i++){
-		printf("informe o %dº valor: ",i+1);
-		scanf("%d",&v1[i]);
+	printf("Informe o primeiro valor: ");
+	scanf("%f",&n1);
+	printf("Informe o segundo valor: ");
+	scanf("%f",&n2);
+	
+	if(n2==0){
+		while(n2==0){
+			printf("O segundo valor não aceita 0. Informe outro número!\n");
+			printf("Informe o segundo valor: ");
+			scanf("%f",&n2);
+			system("cls");//limpa tela
+		}
 	}
 	
-	printf("----- VETOR 2 -----\n");
-	for(i=0; i<TAM; i++){
-		printf("informe o %dº valor: ", i+1);
-		scanf("%d",&v2[i]);
-	}
+	div=n1/n2;
+	printf("----- RESULTADO -----\n\n");
+	printf("Divisão entre %.2f e %.2f: %.2f", n1, n2, div);
 	
-	printf("----- VETOR 3 -----\n");
-	for(i=0; i<TAM; i++){
-		printf("informe o %dº valor: ", i+1);
-		scanf("%d",&v3[i]);
-	}
-	
-	for(i=0; i<TAM; i++){
-		v4[i]=v1[i];
-	}
-	
-	for(i=3; i<TAM; i++){
-		v4[i]=v2[i];
-	}
-	
-	for(i=6; i<TAM; i++){
-		v4[i]=v3[i];
-	}
-	
-	for(i=0; i<TAM; i++){
-		printf("%d ",v4[i]);
-	}
-	
-	return 0;	
+	return 0;
 }

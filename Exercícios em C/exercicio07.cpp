@@ -1,7 +1,14 @@
-/*7.	Fazer um programa para verificar se um número lido é número perfeito. 
-Número perfeito é aquele que é igual a soma dos seus divisores. 
-Por exemplo: 6 = 1 + 2 + 3
-*/
+/*************************************************************************
+* Faculdade: ESBAM
+* Disciplina: Projeto de Algoritmo e Técnicas de Programação
+* Professora: Ivana
+* Aluno: Francisvan Oliveira Pessoa
+*
+* Fazer um programa para verificar se um número lido é número perfeito. 
+* Número perfeito é aquele que é igual a soma dos seus divisores. 
+* Por exemplo: 6 = 1 + 2 + 3
+**************************************************************************/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<locale.h>

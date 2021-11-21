@@ -3,39 +3,33 @@
 * Disciplina: Projeto de Algoritmo e Técnicas de Programação
 * Aluno: Francisvan Oliveira Pessoa
 *
-* Escreva um programa que permita a leitura dos nomes de 10 pessoas e armazene os nomes lidos em um vetor. 
-* Após isto, o programa deve permitir a leitura de mais 1 nome qualquer de pessoa e depois escrever a mensagem ACHEI, 
-* se o nome estiver entre os 10 nomes lidos anteriormente (guardados no vetor), ou NÃO ACHEI caso contrário
+* Faça um programa para ler uma matriz 3x3 e traga o produto da diagonal principal.
 **************************************************************************/
 
 #include<stdio.h>
-#include<string.h>
-#include<locale.h>
+#include<stdlib.h>
 
-#define TAM 3
+#define tam 3//defir o tamanho da matriz
 
-int main(){
-	setlocale(LC_ALL,"Portuguese");
+
+int main (){
+	int matriz[tam][tam], i, j, dia=1;
 	
-	char nomes[TAM][10], nome[10], i;
-	int n;
-	
-	for(i=0; i<TAM; i++){
-		printf("Informe o %dº nome: ", i+1);
-		scanf("%s",&nomes[i]);
-	}
-	
-	printf("\nInforme uma nome para busca: ");
-	scanf("%s",&nome);
-	
-	for(i=0; i<TAM; i++){
-		n=strcmp(nomes[i], nome);
-	}
-	
-	if(n==0)
-		printf("Achei!");
-	else
-		printf("Não Achei!");
+	printf("Digite o valor dos elemntos da Matriz\n\n");
+	for(i=0; i<tam; i++){
+		for(j=0; j<tam; j++){
+			printf("\n[%d][%d] = ", i, j);
+			scanf("%d",&matriz[i][j]);
+			
+			if(i==j)
+				dia=dia*matriz[i][j];
+		}//coluna
+	}//linha
 		
-	return 0;	
+	system("cls");//limpar tela
+	printf("-------- RESULTADO --------\n");
+    printf("\nProduto diagonal principal: %d",dia);
+        
+    return 0;
+	
 }

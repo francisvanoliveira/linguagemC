@@ -18,7 +18,7 @@ int main(){
 	int n, i, t1, t2, t3;
 	
 	printf("-------------------------");
-	printf("\nSEQUENCIA FETUCCINE");
+	printf("\nSEQUÊNCIA FETUCCINE");
 	printf("\n-------------------------\n\n");	
 	printf("Quantos termos irá mostrar? ");
 	scanf("%d",&n);
@@ -47,5 +47,6 @@ int main(){
 			t2=t3;
 		}
 	}
-	
+
+	return 0;	
 }

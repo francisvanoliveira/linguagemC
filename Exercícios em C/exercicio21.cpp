@@ -1,69 +1,51 @@
 /*************************************************************************
 * Faculdade: ESBAM
 * Disciplina: Projeto de Algoritmo e Técnicas de Programação
-* Professora: Ivana
 * Aluno: Francisvan Oliveira Pessoa
 *
-* Construa um programa que leia as informações de: horas trabalhadas (HT), valor da hora trabalhada (VH). Calcule e apresente o salário líquido dos empregados da empresa, baseado nas tabelas abaixo.
-* INSS = 11% do salário bruto
-* Salário Líquido = Salário Bruto - INSS - Imposto de Renda
-* Imposto de Renda após descontar o INSS usar esse valor e ler a alíquota do imposto de renda na tabela abaixo
-* Salário Bruto - INSS | Alíquota | Deduzir
-* Até $900 | Isento
-* De $900 até $1800 | 15% | $135
-* Mais que $1800 | 27,5% | $360
+* Faça um programa com 3 vetores de 9 posições e crie o 4º vetor com o 1º terço do primeiro vetor, 
+* o 2º terço do segundo vetor e o último terço do terceiro vetor. Escrever o vetor resultante ao final.
 **************************************************************************/
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>//bibloteca para usar o setlocale
-#include<ctype.h>//bliboteca para usar o toupper
+#include<locale.h>
+
+#define TAM 9
 
 int main(){
-	setlocale (LC_ALL,"Portuguese");
+	setlocale(LC_ALL,"Portuguese");
 	
-	float ht, vh, inss, bruto, liq, renda;
-	char x;
+	int v1[TAM], v2[TAM], v3[TAM], v4[TAM]={0}, i;
 	
-	do{
-		printf("----- CALCULO SALÁRIO -----\n\n");
-		printf("Horas trabalhadas: ");
-		scanf("%f",&ht);
-		printf("Valor da hora: ");
-		scanf("%f",&vh);
-		
-		bruto=vh*ht;
-		inss=bruto*0.11;
-		
-		if((bruto>=900)&&(bruto<1800))
-			renda=0.15*(bruto-inss)-135;
-		else if(bruto>=1800)
-			renda=0.275*(bruto-inss)-360;
-		else
-			renda=0;
-		
-		liq=bruto-inss-renda;
-		
-		printf("\nSalário bruto: %.2f",bruto);
-		printf("\nINSS: %.2f",inss);
-		printf("\nImposta de renda: %.2f",renda);
-		printf("\nSalário líquido: %.2f",liq);
-		
-		printf("\n\nDesejar calcular outro salário? [S/N] ");
-		scanf("%s",&x);
-		x=toupper(x);//converte minusculo para maiusculo
-		if((x!='S')&&(x!='N')){
-    		printf("Informação inválida!\nInforme S para sim e N não.\n");
-    		printf("Desejar calcular outro salário? [S/N] ");
-    		scanf("%s", &x);
-    		x=toupper(x);//converte minusculo para maiusculo
-    		if((x!='S')&&(x!='N')){
-    			printf("\nPara sair tecle qualquer tecla!");
-    			exit(0);//interronpe o programa
-			}
-		}
-		system("cls");
-	}while(x=='S');
+	printf("----- VETOR 1 -----\n");
+	for(i=0; i<TAM; i++){
+		printf("informe o %dº valor: ",i+1);
+		scanf("%d",&v1[i]);
+	}
 	
-	return 0;
+	printf("----- VETOR 2 -----\n");
+	for(i=0; i<TAM; i++){
+		printf("informe o %dº valor: ", i+1);
+		scanf("%d",&v2[i]);
+	}
+	
+	printf("----- VETOR 3 -----\n");
+	for(i=0; i<TAM; i++){
+		printf("informe o %dº valor: ", i+1);
+		scanf("%d",&v3[i]);
+	}
+	
+	for(i=0; i<TAM; i++){
+		if(i<3)
+			v4[i]=v1[i];
+		if(i>=3 && i<6)
+			v4[i]=v2[i];
+		if(i>=6)
+			v4[i]=v3[i];
+			
+		printf("%d ",v4[i]);
+	}
+		
+	return 0;	
 }

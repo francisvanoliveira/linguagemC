@@ -1,6 +1,13 @@
-/*Fazer um programa para achar a série bergamacci dos n primeiros termos.
-1   1   1   3   5   9   17 ...
-*/
+/*************************************************************************
+* Faculdade: ESBAM
+* Disciplina: Projeto de Algoritmo e Técnicas de Programação
+* Professora: Ivana
+* Aluno: Francisvan Oliveira Pessoa
+*
+* Fazer um programa para achar a série bergamacci dos n primeiros termos.
+* 1   1   1   3   5   9   17 ...
+**************************************************************************/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<locale.h>//biblioteca para utilizar setlocale
@@ -11,7 +18,7 @@ int main (){
 	int t1=1, t2=1, t3=1, t4, n, i;
 	
 	printf("-------------------------");
-	printf("\nSEQUENCIA BERGAMACCI");
+	printf("\nSEQUÊNCIA BERGAMACCI");
 	printf("\n-------------------------\n\n");
 	printf("Quantos termos você quer mostrar: ");
 	scanf("%d",&n);

@@ -4,8 +4,8 @@
 * Professora: Ivana
 * Aluno: Francisvan Oliveira Pessoa
 *
-* Supondo que a população da cidade A é de 50.000 habitantes com uma taxa anual de crescimento de 3% e que a população de uma cidade B é de 200.000 habitantes com uma taxa de crescimento de 1,5%.
-* Fazer um programa que calcule e escreva o número de anos necessários para que a população da cidade A ultrapasse a da cidade B, mantidas essas taxas de crescimento. 
+* nacleto tem 1,50m e cresce 2 centímetros por ano, enquanto Felisberto tem 1,10 e cresce 3 centímetros por ano. 
+* Construa um programa que calcule e apresente quantos anos serão necessários para que Felisberto seja maior que Anacleto.
 **************************************************************************/
 
 #include<stdio.h>
@@ -13,12 +13,12 @@
 
 int main(){
 	
-	double a=50000, b=200000;
+	float a=150, f=110;
 	int cont=0;
 	
-	while(a<b){
-		a+=a*0.03;
-		b+=b*0.015;
+	while(f<a){
+		a+=2;
+		f+=3;
 		cont++;
 	}
 	printf("----- RESULTADO -----\n\n");
